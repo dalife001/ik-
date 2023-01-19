@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="Tehtävä3.js"></script>
+    <div class="container">
+        <form class="birthdate"> <input type="text" id="Syntymäpäivä">
+      <br>
+      <button type="button" onclick="Laskeikä()">Laske ikä</button>
+    </form>
+    <br> <span id="Ikä"></span>
+        
+            </form>
+            <p>numerona<input type="date" id="ike"></p>
+<p>tulo <span id="tulos"></span></p>
+
+<script>
+  function calculateDays(){
+    var birthdate = document.getElementById("ike").value;
+    var bd = new Date(birthdate);
+
+    var today = new Date();
+
+    var diff = today - bd;
+
+    var days = diff / (1000 * 60 * 60 * 24);
+
+    document.getElementById("tulos").innerHTML = days.toFixed(0);
+  }
+  document.getElementById("ike").addEventListener("change", calculateDays);
+
+</script>
+               
+                <style>
+                    body {
+  --color-primary: #009579;
+  --color-primary-dark: #007f67;
+  --color-secondary: #252c6a;
+  --color-error: #cc3333;
+  --color-success: #4bb544;
+  --border-radius: 4px;
+
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  background-color: black;
+  background-size: cover;
+}
+                    
+.container {
+  width: 400px;
+  max-width: 400px;
+  margin: 1rem;
+  padding: 2rem;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+  border-radius: var(--border-radius);
+  background: #ffffff;
+}
+
+                </style>
+</head>
+
+<body>
+    
+</body>
+</html>
